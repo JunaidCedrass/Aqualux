@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
-:root { --ink: #102a36; --muted: #607580; --blue: #08a9e2; --blue-deep: #067eae; --pale: #f2f9fa; --line: #d8e8eb; --white: #fff; --display: 'Manrope', sans-serif; --body: 'DM Sans', sans-serif; }
+:root { --ink: #102a36; --muted: #607580; --blue: #12b8a6; --blue-deep: #087f7a; --pale: #effaf8; --line: #cce9e5; --white: #fff; --display: 'Manrope', sans-serif; --body: 'DM Sans', sans-serif; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--white); font-family: var(--body); line-height: 1.6; }
@@ -13,12 +13,12 @@ svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-
 .main-nav a, .footer-links a { transition: color .2s ease; }
 .main-nav a:hover, .footer-links a:hover { color: var(--blue); }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 3rem; padding: .8rem 1.3rem; border: 1px solid var(--blue); border-radius: .3rem; color: var(--white); background: var(--blue); font-weight: 700; font-size: .9rem; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
-.button:hover { transform: translateY(-2px); background: #23bbed; border-color: #23bbed; }
+.button:hover { transform: translateY(-2px); background: #20c8b5; border-color: #20c8b5; }
 .button-small { min-height: 2.4rem; padding: .5rem 1rem; font-size: .8rem; }
 .button-outline { border-color: #bad8df; background: transparent; }
 .button-outline:hover { color: var(--ink); background: #fff; border-color: #fff; }
 .button-light { color: var(--ink); background: #fff; border-color: #fff; }
-.button-light:hover { background: #e5f7fa; border-color: #e5f7fa; }
+.button-light:hover { background: #e2f7f3; border-color: #e2f7f3; }
 .menu-toggle { display: none; color: white; background: transparent; border: 0; padding: .4rem; }
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; color: #fff; background: linear-gradient(90deg, rgba(3, 31, 45, .9) 0%, rgba(3, 52, 70, .65) 46%, rgba(3, 30, 38, .12) 100%), url('/assets/hero-pool.jpg') center/cover; }
 .hero-content { width: min(1180px, 100%); margin: 5rem auto 0; padding: 0 1.25rem; }
@@ -66,7 +66,7 @@ h2 { max-width: 38rem; margin: 0; font: 700 clamp(2rem, 4vw, 3.35rem)/1.1 var(--
 .benefit p { max-width: 20rem; margin: 0; color: var(--muted); font-size: .93rem; }
 .contact { max-width: none; padding-top: 6rem; padding-bottom: 6rem; color: #fff; background: var(--blue-deep); }
 .contact-inner { width: min(1180px, 100%); margin: 0 auto; }
-.contact .eyebrow { color: #a9ecff; }
+.contact .eyebrow { color: #a9f0e6; }
 .contact h2 { max-width: 32rem; }
 .contact-inner > p:not(.eyebrow) { margin: 1.2rem 0 1.8rem; color: #c7ebf2; }
 .site-footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 2rem; padding: 3rem max(1.25rem, calc((100vw - 1180px) / 2)); color: #a7bec4; background: #0b242e; font-size: .82rem; }
