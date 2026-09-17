@@ -8,7 +8,7 @@ a { color: inherit; text-decoration: none; }
 svg { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; flex: 0 0 auto; }
 .site-header { position: absolute; z-index: 3; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; padding: 1.05rem max(1.25rem, calc((100vw - 1180px) / 2)); color: #fff; background: rgba(11, 31, 42, .8); backdrop-filter: blur(14px); }
 .brand { display: inline-flex; align-items: center; gap: .45rem; font: 800 1.05rem var(--display); letter-spacing: -.04em; }
-.brand svg { width: 1.65rem; color: var(--blue); stroke-width: 2.2; }
+.brand img {width: 2.2rem;height: 2.2rem;display: block;border-radius: .35rem;}
 .main-nav { display: flex; gap: 2.2rem; margin-left: auto; margin-right: 4rem; font-size: .9rem; color: #d7e1e4; }
 .main-nav a, .footer-links a { transition: color .2s ease; }
 .main-nav a:hover, .footer-links a:hover { color: var(--blue); }
@@ -44,11 +44,13 @@ h2 { max-width: 38rem; margin: 0; font: 700 clamp(2rem, 4vw, 3.35rem)/1.1 var(--
 .package-card.is-popular { color: #fff; border-color: var(--ink); background: var(--ink); }
 .popular-label { position: absolute; top: 0; right: 0; padding: .4rem .75rem; color: var(--ink); background: var(--blue); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
 .package-card h3 { margin: 0 0 1.8rem; font: 700 1.2rem var(--display); }
-.price { display: flex; align-items: baseline; gap: .5rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
+.price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .45rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
 .is-popular .price { border-color: #40555e; }
+.price-label { color: var(--muted); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.is-popular .price-label { color: #abc0c5; }
 .price strong { font: 800 2.8rem/1 var(--display); letter-spacing: -.07em; }
-.price span { color: var(--muted); font-size: .83rem; }
-.is-popular .price span { color: #abc0c5; }
+.price span:last-child { color: var(--muted); font-size: .83rem; }
+.is-popular .price span:last-child { color: #abc0c5; }
 .package-card ul { display: grid; gap: .7rem; padding: 1.5rem 0; margin: 0; list-style: none; color: var(--muted); font-size: .87rem; }
 .is-popular ul { color: #d5e5e8; }
 .package-card li { display: flex; align-items: start; gap: .65rem; }

@@ -4,7 +4,6 @@ const whatsappUrl = 'https://wa.me/27651431426?text=Hi%20Raees%2C%20I%27d%20like
 const phoneUrl = 'tel:+27651431426';
 
 const icons = {
-  waves: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 13c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2M2 18c2.5 0 2.5-2 5-2s2.5 2 5 2 2.5-2 5-2 2.5 2 5 2" /></svg>',
   message: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.2 8.2 0 0 1-3.2-.7L4 20l1.7-3.8A7.2 7.2 0 0 1 4 11.5 7.5 7.5 0 0 1 12 4a7.5 7.5 0 0 1 8 7.5Z" /></svg>',
   phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 4.3 5.8 5.5a2 2 0 0 0-.7 2.4c1.9 5.2 5.8 9.1 11 11a2 2 0 0 0 2.4-.7l1.2-1.6a1.8 1.8 0 0 0-.3-2.5l-2.2-1.7a1.8 1.8 0 0 0-2.3.1l-1 1a13.6 13.6 0 0 1-4.4-4.4l1-1a1.8 1.8 0 0 0 .1-2.3L9.9 4.6a1.8 1.8 0 0 0-2.5-.3Z" /></svg>',
   arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>',
@@ -22,7 +21,11 @@ const packageCards = packages.map((pkg) => `
   <article class="package-card ${pkg.popular ? 'is-popular' : ''}">
     ${pkg.popular ? '<span class="popular-label">Most popular</span>' : ''}
     <h3>${pkg.name}</h3>
-    <div class="price"><strong>${pkg.price}</strong><span>${pkg.unit}</span></div>
+    <div class="price">
+      <span class="price-label">From</span>
+      <strong>${pkg.price}</strong>
+      <span>${pkg.unit}</span>
+    </div>
     <ul>${pkg.features.map((feature) => `<li>${icons.check}<span>${feature}</span></li>`).join('')}</ul>
     <a class="text-link" href="${whatsappUrl}" target="_blank" rel="noreferrer">Request this package ${icons.arrow}</a>
   </article>
@@ -30,7 +33,7 @@ const packageCards = packages.map((pkg) => `
 
 document.querySelector('#app').innerHTML = `
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="AquaLux home">${icons.waves}<span>AQUALUX</span></a>
+    <a class="brand" href="#home" aria-label="AquaLux home"><img src="/assets/aqualux-logo2.png" alt="" /><span>AQUALUX</span></a>
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a><a href="#packages">Packages</a><a href="#why-us">Why AquaLux</a><a href="#contact">Contact</a>
     </nav>
@@ -61,7 +64,8 @@ document.querySelector('#app').innerHTML = `
     <section class="contact section-shell" id="contact"><div class="contact-inner reveal"><p class="eyebrow">Get in touch</p><h2>Contact AquaLux for a free quote.</h2><div class="contact-details"><p><strong>Raees Albertus</strong><br /><a href="${phoneUrl}">+27 65 143 1426</a></p><p><strong>Saaleh Albertus</strong><br /><a href="tel:+27744468464">+27 74 446 8464</a></p><p><a href="mailto:aqualuxpm@gmail.com">aqualuxpm@gmail.com</a></p></div><div class="contact-actions"><a class="button" href="${whatsappUrl}" target="_blank" rel="noreferrer">${icons.message}<span>Contact us on WhatsApp</span></a></div></div></section>
   </main>
 
-  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="#home">${icons.waves}<span>AQUALUX</span></a><p>Pool maintenance in Cape Town.</p></div><div class="footer-links"><a href="#packages">Packages</a><a href="#why-us">Why AquaLux</a><a href="#contact">Contact</a></div><p class="copyright">© 2026 AQUALUX. All rights reserved.</p></footer>
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="#home">
+  <img src="/assets/aqualux-logo2.png" alt="" /><span>AQUALUX</span></a><p>Pool maintenance in Cape Town.</p></div><div class="footer-links"><a href="#packages">Packages</a><a href="#why-us">Why AquaLux</a><a href="#contact">Contact</a></div><p class="copyright">© 2026 AQUALUX. All rights reserved.</p></footer>
   <a class="floating-chat" href="${whatsappUrl}" target="_blank" rel="noreferrer" aria-label="Chat to AquaLux on WhatsApp">${icons.message}</a>
 `;
 
