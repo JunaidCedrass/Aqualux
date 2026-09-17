@@ -1,6 +1,6 @@
 import './styles.css';
 
-const whatsappUrl = 'https://wa.me/27651431426?text=Hi%20Raees%2C%20I%27d%20like%20a%20free%20pool%20maintenance%20quote.';
+const whatsappUrl = 'https://wa.me/27651431426?text=Hi%20AquaLux%2C%20I%20am%20reaching%20out%20for%20a%20free%20pool%20maintenance%20quote.';
 const phoneUrl = 'tel:+27651431426';
 
 const icons = {
@@ -9,6 +9,8 @@ const icons = {
   arrow: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>',
   check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7" /></svg>',
   pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>',
+  mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5v-9Z" /><path d="m5 7 7 5 7-5" /></svg>',
+  instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg>',
 };
 
 const packages = [
@@ -46,7 +48,7 @@ document.querySelector('#app').innerHTML = `
       <div class="hero-content">
         <p class="eyebrow">Pool maintenance service</p>
         <h1>AQUALUX</h1>
-        <p class="hero-copy">Professional pool care in Cape Town. Keeping your pool clean, safe and ready to swim.</p>
+        <p class="hero-copy">Your pool, our expertise.</p>
         <div class="hero-actions"><a class="button" href="${whatsappUrl}" target="_blank" rel="noreferrer">${icons.message}<span>WhatsApp us</span></a><a class="button button-outline" href="${phoneUrl}">${icons.phone}<span>Call us</span></a></div>
       </div>
       <a class="scroll-cue" href="#about" aria-label="Scroll to learn more"><span></span></a>
@@ -61,7 +63,43 @@ document.querySelector('#app').innerHTML = `
 
     <section class="why-us section-shell" id="why-us"><div class="section-heading reveal"><p class="eyebrow">Why choose AquaLux</p><h2>Pool care you can depend on.</h2></div><div class="benefits"><article class="benefit reveal"><div class="benefit-number">01</div><h3>Reliable service</h3><p>We show up on schedule, every time. No missed visits, no excuses.</p></article><article class="benefit reveal"><div class="benefit-number">02</div><h3>Premium products</h3><p>Professional-grade chemicals and equipment for the best results.</p></article><article class="benefit reveal"><div class="benefit-number">03</div><h3>Cape Town experts</h3><p>Local knowledge and attention to detail for coastal pool care.</p></article></div></section>
 
-    <section class="contact section-shell" id="contact"><div class="contact-inner reveal"><p class="eyebrow">Get in touch</p><h2>Contact AquaLux for a free quote.</h2><div class="contact-details"><p><strong>Raees Albertus</strong><br /><a href="${phoneUrl}">+27 65 143 1426</a></p><p><strong>Saaleh Albertus</strong><br /><a href="tel:+27744468464">+27 74 446 8464</a></p><p><a href="mailto:aqualuxpm@gmail.com">aqualuxpm@gmail.com</a></p></div><div class="contact-actions"><a class="button" href="${whatsappUrl}" target="_blank" rel="noreferrer">${icons.message}<span>Contact us on WhatsApp</span></a></div></div></section>
+    <section class="contact section-shell" id="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Contact AquaLux for a free quote.</h2>
+        <div class="contact-details">
+          <a class="contact-card" href="${phoneUrl}">
+            <span class="contact-icon">${icons.phone}</span>
+            <div>
+              <strong>+27 65 143 1426</strong>
+            </div>
+          </a>
+          <a class="contact-card" href="tel:+27744468464">
+            <span class="contact-icon">${icons.phone}</span>
+            <div>
+              <strong>+27 74 446 8464</strong>
+            </div>
+          </a>
+          <a class="contact-card" href="mailto:aqualuxpm@gmail.com">
+            <span class="contact-icon">${icons.mail}</span>
+            <div>
+              <small>Email</small>
+              <strong>aqualuxpm@gmail.com</strong>
+            </div>
+          </a>
+          <a class="contact-card" href="https://www.instagram.com/aqualuxpm.co/" target="_blank" rel="noreferrer">
+            <span class="contact-icon">${icons.instagram}</span>
+            <div>
+              <small>Instagram</small>
+              <strong>@aqualuxpm.co</strong>
+            </div>
+          </a>
+        </div>
+        <div class="contact-actions">
+          <a class="button" href="${whatsappUrl}" target="_blank" rel="noreferrer">${icons.message}<span>Contact us on WhatsApp</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer"><div class="footer-brand"><a class="brand" href="#home">
